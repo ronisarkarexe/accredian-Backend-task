@@ -5,8 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ReferRouters = void 0;
 const express_1 = __importDefault(require("express"));
+const refer_controller_1 = require("./refer.controller");
 const router = express_1.default.Router();
-router.get("/", (req, res) => {
-    res.json({ message: "refer router" });
-});
+router.post("/", refer_controller_1.ReferController.createRefer);
+router.get("/", refer_controller_1.ReferController.getRefers);
+router.get("/:id", refer_controller_1.ReferController.getRefer);
 exports.ReferRouters = router;
