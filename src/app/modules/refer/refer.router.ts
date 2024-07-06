@@ -1,9 +1,15 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import { ReferController } from "./refer.controller";
+import { validateRequest } from "../../../utils/validation";
+import { ReferValidation } from "./refer.validation";
 
 const router = express.Router();
 
-router.post("/", ReferController.createRefer);
+router.post(
+  "/",
+  validateRequest(ReferValidation.createRefer),
+  ReferController.createRefer
+);
 
 router.get("/", ReferController.getRefers);
 
