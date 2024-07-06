@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/server.js",
     "postinstall": "prisma generate",
-    "build": "prisma generate && next build && tsc"
+    "build": "npx prisma generate && npm install && tsc",
+    "prestart": "npm run build"
   },
   "keywords": [],
   "author": "",
