@@ -1,6 +1,7 @@
 import express from "express";
 import { Router } from "express";
 import { ReferRouters } from "../app/modules/refer/refer.router";
+import { OtpRouters } from "../app/modules/otp/otp.router";
 
 const router = express.Router();
 
@@ -13,6 +14,10 @@ const routers: ReferRouter[] = [
   {
     path: "/refer",
     route: ReferRouters,
+  },
+  {
+    path: "/otp",
+    route: OtpRouters,
   },
 ];
 
