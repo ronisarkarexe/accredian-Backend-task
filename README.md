@@ -25,6 +25,11 @@ Instructions on setting up your project locally.
 - PORT = "port number"
 - DATABASE_URL = "add your db url"
 
+#### This Email and Password for OTP Generation.
+
+- EMAIL = 'email@example.com'
+- PASSWORD = 'password'
+
 - Run the app using `npm run dev`
 
 ### Happy Coding...!
